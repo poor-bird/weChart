@@ -10,6 +10,12 @@
     "prettier": "prettier --write .",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "src/**/*.{ts,vue}": [
+      "yarn prettier",
+      "yarn lint"
+    ]
+  },
   "dependencies": {
     "vue": "^3.2.25"
   },
