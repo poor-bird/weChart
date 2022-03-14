@@ -4,7 +4,7 @@ import { ref } from "vue";
 defineProps<{ msg: string }>();
 
 const count = ref(0);
-const xx = 0
+const xx = '12'
 </script>
 
 <template>

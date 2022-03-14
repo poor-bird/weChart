@@ -18,6 +18,7 @@ module.exports = {
   },
   plugins: ['vue', '@typescript-eslint'],
   rules: {
-    "no-undef": true
+    "no-undef": true,
+    "quotes": 2
   },
 };
