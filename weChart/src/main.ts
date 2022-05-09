@@ -1,4 +1,8 @@
-import { createApp } from 'vue';
-import App from './App.vue';
+import { createApp } from 'vue'
+import App from './App.vue'
+import './mock/index'
+// import api from './api'
 
-createApp(App).mount('#app');
+
+// App.prototype.$api = api
+createApp(App).mount('#app')

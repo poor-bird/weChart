@@ -1,18 +1,39 @@
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref } from 'vue'
+import { login } from '@api/login/index'
+import axios from 'axios'
 
-defineProps<{ msg: string }>();
+defineProps<{ msg: string }>()
 
-const count = ref(0);
-const xx = '12'
+const count = ref(0)
+
+function deleteFn() {
+  // axios.post('/auth/login', {name: 'raoshijun'}).then(res => {
+  //   console.log(res);
+  // })
+  axios.get('/api/createUser').then((res: any) => {
+    console.log(res);
+  });
+  login({
+    name: 'raoshijun'
+  }).then((res:any) => {
+    console.log(res);
+    
+  })
+}
+console.log('ss');
+
+deleteFn()
+
+
+
 </script>
 
 <template>
   <h1>{{ msg }}</h1>
-
   <p>
     Recommended IDE setup:
-    <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
+    <a href="https://code.visualstudio.com/" target="_blank">VS Code</a>
     +
     <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
   </p>
