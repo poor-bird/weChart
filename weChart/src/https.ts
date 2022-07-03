@@ -17,8 +17,8 @@ export const post = function (url:string, params = {}) {
         Accept: 'application/json',
         'Content-type': 'application/json;charset=UTF-8'
       }
-    }).then((res:any) => {
-      resolve(res)
+    }).then((res: any) => {
+      resolve(res.data)
     }).catch((error:any) => {
       reject(error)
     })
@@ -37,7 +37,7 @@ export const get = function (url:string, param:any = {}) {
   }
   return new Promise((resolve, reject) => {
     http.get(`${url}`, params).then((res:any) => {
-      resolve(res)
+      resolve(res.data)
     }).catch((error:any) => {
       reject(error)
     })

@@ -4,7 +4,7 @@ import { MockMethod } from 'vite-plugin-mock';
 import Mock, { Random } from 'mockjs';
 export default [
   {
-    url: '/api/createUser',
+    url: '/api/login',
     method: 'get',
     response: () => {
       return {

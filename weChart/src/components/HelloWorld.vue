@@ -1,19 +1,21 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { login } from '@api/login/index'
-import axios from 'axios'
+import  api from '@api/index'
+// import logins from '@api/index'
+import {inject} from 'vue'
 
 defineProps<{ msg: string }>()
 
 const count = ref(0)
 
+const user = inject('user')
+console.log(user);
+
+const {login} = api
+
 function deleteFn() {
-  // axios.post('/auth/login', {name: 'raoshijun'}).then(res => {
-  //   console.log(res);
-  // })
-  axios.get('/api/createUser').then((res: any) => {
-    console.log(res);
-  });
+  console.log(api);
+  
   login({
     name: 'raoshijun'
   }).then((res:any) => {

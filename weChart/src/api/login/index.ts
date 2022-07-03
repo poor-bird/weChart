@@ -1,7 +1,12 @@
 import {
-  post
+  post,
+  get
 } from '../../https'
 
-export const login = (params: {
+const login = (params: {
   name: string
-}) => post('/auth/login', params)
+}) => post('/api/login', params)
+
+export default {
+  login
+}

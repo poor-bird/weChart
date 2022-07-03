@@ -1,9 +1,6 @@
-// import Mock from 'mockjs'
-// import deleteNews from './delete-news'
-
-import { MockMethod } from 'vite-plugin-mock'
 import user from './user'
-
+import login from './login/login'
 export default [
-  ...user
-]
+  user,
+  login
+] 

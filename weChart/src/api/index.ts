@@ -1,7 +1,7 @@
-// import { userApi } from './login'
+import logins from './login'
 
 const api = {
-  // ...userApi
+  ...logins
 }
 
 export default api
